@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ کاتالوگ نهایی: توانمندی‌های پیشرفته دفاعی 🛰️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* ======================================= */
+        /* CSS Variables & Base Styles (Emerald Neon Theme) */
+        /* ======================================= */
+        :root {
+            --primary: #00CC66; /* سبز استراتژیک */
+            --secondary: #1A1A1A; /* خاکستری تیره عمیق */
+            --bg-dark: #000000; /* پس‌زمینه نهایی مشکی */
+            --text-light: #f5f5f5;
+            --highlight: #CCFF99; /* لیمویی نئون برای تاکید */
+            --card-bg-base: #0f0f0f;
+            --font-main: 'Vazirmatn', sans-serif;
+            --about-bg: #0A140A; /* رنگ خاص برای بخش درباره ما */
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.8;
+            margin: 0;
+            text-align: right;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1450px; /* فضای بیشتر برای محتوا */
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        /* ------------------ Header & Neon Effect ------------------ */
+        header {
+            background-color: var(--bg-dark);
+            padding: 100px 0 50px;
+            text-align: center;
+            border-bottom: 6px solid var(--primary);
+            position: relative;
+            z-index: 1000;
+            box-shadow: 0 0 35px rgba(0, 204, 102, 0.4); /* افکت نئون سبز */
+        }
+
+        header h1 {
+            font-size: 4.5em;
+            color: var(--highlight);
+            text-shadow: 0 0 20px rgba(0, 204, 102, 0.8), 0 0 40px rgba(204, 255, 153, 0.5); /* سایه عمیق نئون */
+            margin: 0 0 15px 0;
+            font-weight: 900;
+        }
+        
+        header p {
+            font-size: 1.3em;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 12px 20px;
+            border-radius: 5px;
+            transition: all 0.4s ease-in-out;
+            font-size: 1.1em;
+            border: 1px solid var(--primary);
+            background-color: rgba(0, 204, 102, 0.1);
+        }
+        
+        nav a:hover {
+            background-color: var(--primary);
+            color: var(--bg-dark);
+            border-color: var(--highlight);
+            transform: scale(1.05);
+            box-shadow: 0 0 15px var(--highlight);
+        }
+
+        /* ------------------ Section Titles ------------------ */
+        .section-header {
+            margin: 90px 0 60px 0;
+            text-align: center;
+        }
+        
+        .section-header h2 {
+            font-size: 3.5em;
+            color: var(--primary);
+            display: inline-block;
+            border-bottom: 4px solid var(--highlight);
+            padding-bottom: 15px;
+            font-weight: 900;
+            text-shadow: 0 0 10px rgba(0, 204, 102, 0.6);
+        }
+        
+        /* ------------------ System Cards (Modern Glass Effect) ------------------ */
+        .system-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* کارت‌های بزرگتر و پرجزئیات */
+            gap: 30px; 
+            padding: 30px 0;
+        }
+
+        .system-card {
+            background-color: rgba(15, 15, 15, 0.8); /* پس‌زمینه تیره نیمه شفاف */
+            backdrop-filter: blur(5px); /* افکت شیشه‌ای ظریف */
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            border: 1px solid rgba(0, 204, 102, 0.3);
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* انیمیشن نرم‌تر */
+            position: relative;
+        }
+
+        .system-card:hover {
+            transform: translateY(-12px) scale(1.01); 
+            box-shadow: 0 25px 60px rgba(0, 204, 102, 0.6), 0 0 50px rgba(0, 204, 102, 0.2);
+        }
+
+        .system-header-card {
+            background: linear-gradient(90deg, #101010 0%, #202020 100%);
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .system-header-card h3 {
+            margin: 0;
+            font-size: 1.8em;
+            color: var(--highlight);
+            font-weight: 900;
+            text-shadow: 0 0 8px var(--primary);
+        }
+        
+        .type-tag {
+            background-color: var(--primary);
+            color: var(--bg-dark);
+            padding: 5px 12px;
+            border-radius: 25px;
+            font-size: 0.8em;
+            font-weight: 900;
+            box-shadow: 0 0 10px rgba(0, 204, 102, 0.8);
+        }
+
+        .system-details {
+            padding: 25px 30px;
+        }
+
+        .data-point {
+            display: grid;
+            grid-template-columns: 30px 1.5fr 1fr; 
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px dotted #333;
+            align-items: center;
+        }
+
+        .data-point:last-child {
+            border-bottom: none;
+        }
+
+        .data-point strong {
+            color: var(--text-light);
+            font-weight: 700;
+            font-size: 1.05em;
+        }
+        
+        .data-value {
+            color: var(--highlight);
+            font-weight: 800;
+            font-size: 1.05em;
+            text-align: left;
+        }
+        
+        .icon-small {
+            color: var(--primary);
+            font-size: 1.2em;
+        }
+        
+        /* ------------------ Tech Section ------------------ */
+        .tech-box {
+            background: linear-gradient(135deg, #151515, #252525);
+            padding: 50px;
+            border-radius: 20px;
+            margin-top: 50px;
+            border: 3px solid var(--highlight);
+            box-shadow: 0 0 40px rgba(0, 204, 102, 0.3);
+        }
+        
+        .tech-box h3 {
+            color: var(--highlight);
+            font-size: 2.2em;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 12px;
+            margin-top: 0;
+            text-shadow: 0 0 5px var(--primary);
+        }
+        
+        .tech-box p {
+            color: #ccc;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+
+        /* ------------------ About Us Specific Styling (Extensively Improved) ------------------ */
+        #about-us-section {
+            background-color: var(--about-bg);
+            padding: 70px 0;
+            border-radius: 20px;
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 50px rgba(0, 204, 102, 0.2);
+            text-align: center;
+        }
+
+        #about-us-section .intro {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            color: #ddd;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        
+        .team-title {
+            color: var(--primary);
+            font-size: 2.5em;
+            font-weight: 900;
+            margin: 60px 0 40px;
+            text-shadow: 0 0 8px var(--highlight);
+            display: block;
+            border-bottom: 2px solid var(--highlight);
+            width: fit-content;
+            margin: 60px auto 40px;
+            padding-bottom: 10px;
+        }
+
+        .team-grid-expanded {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .designer-card {
+            background-color: #1c261c;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid var(--primary);
+            transition: all 0.5s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .designer-card:hover {
+            transform: translateY(-8px);
+            background-color: #202a20;
+            box-shadow: 0 15px 35px rgba(0, 204, 102, 0.4);
+        }
+
+        .designer-card h5 {
+            margin: 10px 0;
+            font-size: 1.6em;
+            color: var(--highlight);
+            font-weight: 900;
+        }
+
+        .designer-card p {
+            color: #aaa;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        
+        .role-tag {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--bg-dark);
+            padding: 3px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        /* Media Query for Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3em;
+            }
+            .section-header h2 {
+                font-size: 2.5em;
+            }
+            nav a {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+            .system-grid, .team-grid-expanded {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><i class="fas fa-satellite-dish"></i> کاتالوگ تحلیل سامانه‌های دفاعی </h1>
+        <p>مرجعی تخصصی و پیشرفته برای معرفی جامع توانمندی‌های موشکی و پهپادی</p>
+        <nav>
+            <a href="#missiles"><i class="fas fa-rocket"></i> سامانه‌های موشکی</a>
+            <a href="#drones"><i class="fas fa-plane-departure"></i> سامانه‌های پهپادی</a>
+            <a href="#tech"><i class="fas fa-cogs"></i> نوآوری‌های کلیدی</a>
+            <a href="#about-us"><i class="fas fa-users"></i> گروه برنامه‌نویسی آری ماند</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <section id="missiles">
+            <div class="section-header">
+                <h2><i class="fas fa-bullseye"></i> موشک‌ها: بالستیک، کروز و پدافند هوایی</h2>
+            </div>
+            <div class="system-grid">
+                
+                <div class="system-card"><div class="system-header-card"><h3>فتاح ۱</h3><span class="type-tag">هایپرسونیک (HGV)</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-globe-americas"></i><strong>برد عملیاتی:</strong><span class="data-value">۱۴۰۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-tachometer-alt"></i><strong>سرعت در فاز نهایی:</strong><span class="data-value">ماخ ۱۳ تا ۱۵</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-sync-alt"></i><strong>قابلیت:</strong><span class="data-value">مانورهای فرا اتمسفری و اتمسفری</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-shield-alt"></i><strong>مقابله:</strong><span class="data-value">رهگیری با هیچ پدافندی ممکن نیست</span></div>
+                </div></div>
+                <div class="system-card"><div class="system-header-card"><h3>فتاح ۲</h3><span class="type-tag">کروز هایپرسونیک (HCMC)</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-globe-americas"></i><strong>برد:</strong><span class="data-value">۱۵۰۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-fire"></i><strong>کلاس پروازی:</strong><span class="data-value">گلایدر موشک کروز با موتور رام‌جت</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-braille"></i><strong>نقطه زنی (CEP):</strong><span class="data-value">دقت کمتر از ۵ متر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-weight-hanging"></i><strong>حداکثر ارتفاع:</strong><span class="data-value">۱۰۰ کیلومتر (ارتفاع پائین)</span></div>
+                </div></div>
+                <div class="system-card"><div class="system-header-card"><h3>خیبرشکن</h3><span class="type-tag">بالستیک - تاکتیکی سبک</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-globe-americas"></i><strong>برد:</strong><span class="data-value">۱۴۵۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-fire"></i><strong>پیشران:</strong><span class="data-value">سوخت جامد کامپوزیتی سبک</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-truck"></i><strong>آماده‌سازی:</strong><span class="data-value">کمتر از ۵ دقیقه</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-weight-hanging"></i><strong>سرجنگی:</strong><span class="data-value">هدایت‌پذیر در فاز نهایی</span></div>
+                </div></div>
+                <div class="system-card"><div class="system-header-card"><h3>خرمشهر ۴ (خیبر)</h3><span class="type-tag">بالستیک - MIRV</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-globe-americas"></i><strong>برد:</strong><span class="data-value">> ۲۰۰۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-weight-hanging"></i><strong>ظرفیت کلاهک:</strong><span class="data-value">۱۵۰۰ کیلوگرم / چندگانه</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-satellite"></i><strong>ویژگی:</strong><span class="data-value">استفاده از سیستم‌های موقعیت‌یاب غیرغربی</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-cogs"></i><strong>دقت:</strong><span class="data-value">نقطه‌زنی با ضریب خطای بسیار پایین</span></div>
+                </div></div>
+                
+                 <div class="system-card"><div class="system-header-card"><h3>پاوه</h3><span class="type-tag">کروز زمینی</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-globe-americas"></i><strong>برد:</strong><span class="data-value">۱۶۵۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-running"></i><strong>مسیر:</strong><span class="data-value">پرواز در ارتفاع ۷ تا ۱۰ متری زمین</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-eye"></i><strong>هدایت:</strong><span class="data-value">TERCOM & DSMAC پیشرفته</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-fire"></i><strong>موتور:</strong><span class="data-value">توربوفن (جت) با مصرف بهینه</span></div>
+                </div></div>
+                 <div class="system-card"><div class="system-header-card"><h3>حاج قاسم</h3><span class="type-tag">بالستیک - نقطه‌زن</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-globe-americas"></i><strong>برد:</strong><span class="data-value">۱۴۰۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-braille"></i><strong>ویژگی:</strong><span class="data-value">کلاهک جداشونده با مانور شدید</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-weight-hanging"></i><strong>نوع پیشران:</strong><span class="data-value">سوخت جامد با قابلیت شلیک سریع</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-tachometer-alt"></i><strong>طول:</strong><span class="data-value">۱۱ متر</span></div>
+                </div></div>
+                
+                <div class="system-card"><div class="system-header-card"><h3>خلیج فارس ۲</h3><span class="type-tag">بالستیک ضد کشتی (ASBM)</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-globe-americas"></i><strong>برد:</strong><span class="data-value">۳۰۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-ship"></i><strong>نقش:</strong><span class="data-value">ضد ناو هواپیمابر و کشتی‌های بزرگ</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-crosshairs"></i><strong>هدایت:</strong><span class="data-value">اواخر فاز: هومینگ اپتیکی/حرارتی</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-tachometer-alt"></i><strong>سرعت اصابت:</strong><span class="data-value">ماخ ۴ تا ۵</span></div>
+                </div></div>
+                
+                 <div class="system-card"><div class="system-header-card"><h3>هرمز ۲</h3><span class="type-tag">بالستیک ضد رادار (ASBM-ARM)</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-globe-americas"></i><strong>برد:</strong><span class="data-value">۲۵۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-wifi"></i><strong>نقش:</strong><span class="data-value">انفجار و انهدام سیستم‌های راداری</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-cogs"></i><strong>مبتنی بر:</strong><span class="data-value">موشک بالستیک فاتح ۱۱۰</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-truck"></i><strong>کاربرد:</strong><span class="data-value">سرکوب پدافند هوایی دشمن (SEAD)</span></div>
+                </div></div>
+                
+                <div class="system-card"><div class="system-header-card"><h3>صیاد ۴B</h3><span class="type-tag">SAM - برد بلند</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-cloud-upload-alt"></i><strong>حداکثر برد:</strong><span class="data-value">۳۰۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-cogs"></i><strong>سامانه اصلی:</strong><span class="data-value">باور ۳۷۳ (نسل جدید)</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-tachometer-alt"></i><strong>سرعت:</strong><span class="data-value">ماخ ۶.۱</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-shield-alt"></i><strong>قابلیت:</strong><span class="data-value">مقابله با اهداف رادارگریز</span></div>
+                </div></div>
+                <div class="system-card"><div class="system-header-card"><h3>تلاش ۳</h3><span class="type-tag">SAM - برد متوسط</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-globe-americas"></i><strong>برد:</strong><span class="data-value">۲۰۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-microchip"></i><strong>هدایت:</strong><span class="data-value">رادار نیمه‌فعال/فعال</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-truck"></i><strong>مکانیسم:</strong><span class="data-value">پرتاب سرد (Cold Launch)</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-cogs"></i><strong>ارتفاع درگیری:</strong><span class="data-value">۲۷ کیلومتر</span></div>
+                </div></div>
+            </div>
+            <div style="text-align: center; color: #777; padding-top: 30px; font-style: italic; font-size: 0.95em;">
+                <p>این بخش تنها منتخبی از موشک‌های بالستیک، کروز و پدافندی فعال است و ده‌ها سامانه دیگر را شامل می‌شود.</p>
+            </div>
+        </section>
+
+        <hr style="border-top: 2px solid #333; margin: 90px 0;">
+
+        <section id="drones">
+            <div class="section-header">
+                <h2><i class="fas fa-plane-departure"></i> پهپادها: رزمی، شناسایی و انتحاری (UAV/UCAV/LM)</h2>
+            </div>
+            <div class="system-grid">
+
+                <div class="system-card"><div class="system-header-card"><h3>مهاجر ۱۰</h3><span class="type-tag">MALE - رزمی</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-clock"></i><strong>استقامت:</strong><span class="data-value">۲۴ ساعت پرواز مداوم</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-weight-hanging"></i><strong>حداکثر محموله:</strong><span class="data-value">۳۰۰ کیلوگرم (تسلیحات و سنسور)</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-map-marked-alt"></i><strong>بُرد شعاعی:</strong><span class="data-value">۲۰۰۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-cloud-upload-alt"></i><strong>سقف پرواز:</strong><span class="data-value">۷۳۰۰ متر (۲۴,۰۰۰ پا)</span></div>
+                </div></div>
+                <div class="system-card"><div class="system-header-card"><h3>شاهد ۱۴۹ (غزه)</h3><span class="type-tag">HALE - استراتژیک</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-fire"></i><strong>موتور:</strong><span class="data-value">توربوپراپ (Rotax 915 iS)</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-satellite"></i><strong>ارتباط:</strong><span class="data-value">کنترل از طریق ماهواره (SATCOM)</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-cloud-upload-alt"></i><strong>سقف پرواز:</strong><span class="data-value">۱۰,۶۰۰ متر (۳۵,۰۰۰ پا)</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-bomb"></i><strong>تعداد تسلیحات:</strong><span class="data-value">۱۳ مهمات هوشمند</span></div>
+                </div></div>
+                <div class="system-card"><div class="system-header-card"><h3>صاعقه ۲</h3><span class="type-tag">بال پرنده - پنهانکار</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-shield-alt"></i><strong>قابلیت:</strong><span class="data-value">رادارگریزی و جذب امواج (Stealth)</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-weight-hanging"></i><strong>تسلیحات:</strong><span class="data-value">بمب سدید با مخزن داخلی</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-map-marked-alt"></i><strong>برد:</strong><span class="data-value">۱۵۰۰ کیلومتر (دو طرفه)</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-cogs"></i><strong>موتور:</strong><span class="data-value">جت (Turbofan)</span></div>
+                </div></div>
+                <div class="system-card"><div class="system-header-card"><h3>فطرس</h3><span class="type-tag">MALE - چند منظوره</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-clock"></i><strong>استقامت:</strong><span class="data-value">۳۰ ساعت</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-map-marked-alt"></i><strong>برد عملیاتی:</strong><span class="data-value">۲۰۰۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-cloud-upload-alt"></i><strong>ارتفاع:</strong><span class="data-value">۷۶۰۰ متر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-eye"></i><strong>نقش اصلی:</strong><span class="data-value">نظارت، شناسایی و کنترل مرزها</span></div>
+                </div></div>
+                
+                <div class="system-card"><div class="system-header-card"><h3>شاهد ۱۳۶</h3><span class="type-tag">انتحاری - برد بلند</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-map-marked-alt"></i><strong>برد:</strong><span class="data-value">۲۰۰۰ تا ۲۵۰۰ کیلومتر</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-truck"></i><strong>روش پرتاب:</strong><span class="data-value">پرتابگرهای موشکی چندتایی (Cannister)</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-tachometer-alt"></i><strong>سرعت:</strong><span class="data-value">۱۸۵ کیلومتر بر ساعت</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-weight-hanging"></i><strong>سرجنگی:</strong><span class="data-value">۴۰ کیلوگرم HE</span></div>
+                </div></div>
+                <div class="system-card"><div class="system-header-card"><h3>شاهد ۲۳۸</h3><span class="type-tag">انتحاری - جت</span></div><div class="system-details">
+                    <div class="data-point"><i class="icon-small fas fa-fire"></i><strong>موتور:</strong><span class="data-value">موتور جت (افزایش سرعت)</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-tachometer-alt"></i><strong>سرعت:</strong><span class="data-value">بالاتر از ماخ ۰.۸ (فوق سریع)</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-palette"></i><strong>هدایت:</strong><span class="data-value">IR/EO/Radar (چندگانه)</span></div>
+                    <div class="data-point"><i class="icon-small fas fa-shield-alt"></i><strong>مزیت:</strong><span class="data-value">پایین آوردن زمان واکنش پدافند</span></div>
+                </div></div>
+            </div>
+             <div style="text-align: center; color: #777; padding-top: 30px; font-style: italic; font-size: 0.95em;">
+                <p>این بخش تنها منتخبی از مهم‌ترین پهپادها و مهمات سرگردان فعال است و ده‌ها مدل رزمی و شناسایی دیگر را شامل می‌شود.</p>
+            </div>
+        </section>
+
+        <hr style="border-top: 2px solid #333; margin: 90px 0;">
+        
+        <section id="tech">
+            <div class="section-header">
+                <h2><i class="fas fa-cogs"></i> نوآوری‌های کلیدی: پیشرانش و هدایت</h2>
+            </div>
+            <div class="tech-box">
+                
+                <h3><i class="fas fa-microchip"></i> مدیریت چرخه زندگی موشک (Missile Life-Cycle Management)</h3>
+                <p>توسعه سیستم‌های پیشرفته ذخیره‌سازی و مدیریت موشک‌های سوخت مایع در حالت آماده به شلیک برای طولانی مدت، و کاهش زمان واکنش عملیاتی موشک‌های سوخت جامد به زیر **۱۰ دقیقه**.</p>
+                
+                <h3><i class="fas fa-rocket"></i> فناوری سوخت کامپوزیتی با فیبر کربن (Carbon Fiber Composite)</h3>
+                <p>ساخت بدنه موشک‌ها و موتورهای سوخت جامد با استفاده از فیبر کربن پیشرفته که منجر به **کاهش ۶۰٪ وزن کلی** و در نتیجه افزایش چشمگیر برد عملیاتی و توان حمل سرجنگی می‌شود.</p>
+                
+                <h3><i class="icon-small fas fa-satellite"></i> سامانه‌های هدایت پیشرفته (Navigation System Redundancy)</h3>
+                <p>استفاده از سیستم‌های هدایت **اینرسیایی (INS)** با به‌روزرسانی‌های چند لایه: **سیستم‌های راداری SAR، دوربین‌های اپتیکی تطبیق با زمین (TERCOM)، و سیستم‌های ناوبری تصویربرداری (DSMAC)** برای اطمینان از دقت نقطه‌زنی، حتی در صورت قطع سیگنال‌های GNSS.</p>
+            </div>
+        </section>
+        
+        <hr style="border-top: 2px solid #333; margin: 90px 0;">
+        
+        <section id="about-us">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> گروه برنامه‌نویسی آری ماند</h2>
+            </div>
+            <div id="about-us-section" class="container">
+                <div class="intro">
+                    <p>
+                        **گروه برنامه‌نویسی آری ماند** (ARYMAND) یک نهاد تخصصی در زمینه معماری اطلاعات، طراحی بصری (UI/UX) و تحلیل داده‌های حوزه‌ی فناوری دفاعی است. مأموریت ما، تبدیل اطلاعات منتشر شده به کاتالوگ‌های تخصصی، تعاملی و با بالاترین سطح دقت بصری و فنی است. ما به عنوان یک تیم مستقل، استانداردهای طراحی مدرن و تحلیل عمیق داده را ترکیب می‌کنیم.
+                    </p>
+                </div>
+
+                <span class="team-title"><i class="fas fa-laptop-code"></i> هسته‌ی تیم طراحان اصلی</span>
+
+                <div class="team-grid-expanded">
+                    
+                    <div class="designer-card">
+                        <i class="fas fa-user-circle fa-4x" style="color: var(--highlight);"></i>
+                        <h5>علیرضا آزادیان</h5>
+                        <span class="role-tag">مدیر ارشد پروژه و تحلیل فنی</span>
+                        <p style="margin-top: 15px;">استراتژیست اصلی گروه، متخصص در حوزه تحلیل داده‌های نظامی و تطبیق جزئیات فنی سامانه‌ها با استانداردهای بین‌المللی. مسئول اطمینان از صحت و عمق محتوا.</p>
+                    </div>
+                    
+                    <div class="designer-card">
+                        <i class="fas fa-server fa-4x" style="color: var(--highlight);"></i>
+                        <h5>محمد سعیدی</h5>
+                        <span class="role-tag">معماری اطلاعات و مهندسی داده</span>
+                        <p style="margin-top: 15px;">متخصص در ساختاردهی و مدیریت حجم عظیمی از اطلاعات فنی، بهینه‌سازی دیتابیس (SQL/NoSQL) و توسعه چارچوب‌های کدنویسی قابل گسترش.</p>
+                    </div>
+                    
+                    <div class="designer-card">
+                        <i class="fas fa-paint-brush fa-4x" style="color: var(--highlight);"></i>
+                        <h5>علیرضا مولایی فر</h5>
+                        <span class="role-tag">طراح UI/UX و معماری بصری</span>
+                        <p style="margin-top: 15px;">مسئول خلق تم نهایی، طراحی جذابیت بصری صفحات، پیاده‌سازی افکت‌های مدرن CSS و تضمین تجربه کاربری بهینه در تمامی دستگاه‌ها.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+            
+            // Effect 1: Sticky Header with fade
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.style.padding = '20px 0';
+                    header.style.opacity = '0.98';
+                } else {
+                    header.style.padding = '100px 0 50px';
+                    header.style.opacity = '1';
+                }
+            });
+        });
+    </script>
+    <footer style="background-color: #101010; color: #777; padding: 25px 0; text-align: center; margin-top: 50px; font-size: 0.9em; border-top: 4px solid var(--primary);">
+        <p>
+            <i class="fas fa-code"></i> توسعه نهایی توسط **گروه برنامه‌نویسی آری ماند** | طراحی و معماری بصری: **علیرضا مولایی فر** | کلیه حقوق و تحلیل‌ها محفوظ است.
+        </p>
+    </footer>
+
+</body>
+</html>
